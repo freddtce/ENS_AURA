@@ -31,7 +31,7 @@
    "fields":[
       {
          "name":"identifiant",
-         "description":"Un identifiant unique de l'objet défint comme suit :fr-ENS<dep>-<counter>
+         "description":"Un identifiant unique de l'objet définit comme suit :fr-ENS<dep>-<counter>
  avec dep sur 3 chiffres (0 en 1er chiffre pour les départements métropolitains)
 et 1 counter sur  6 chiffres avec des 0 pour combler.",
          "example":fr-ENS001-000001 ,
@@ -42,32 +42,38 @@ et 1 counter sur  6 chiffres avec des 0 pour combler.",
          }
       },
       {
-         "name":"date_creation",
-         "description":"La date de création de l'objet, au format ISO 8601 AAAA-MM-DD.",
-         "example":"2020-02-27",
+         "name":"nom",
+         "description":"nom comme inscrit dans la délibération, en graphie riche (minuscules accentuées)",
+         "example":"Zone humide de la Forêt du Bout et Combe Grasse",
+         "type":"string",
+         "constraints":{
+            "required":true
+         }
+      },
+       {
+         "name":"date_delib",
+         "description":"La date de délibération de création de l'ENS, au format AAAAMMJJ.",
+         "example":"20230824",
          "type":"date",
          "constraints":{
             "required":true
          }
       },
       {
-         "name":"nom",
-         "description":"Le nom de l'objet.",
-         "example":"Brouette",
-         "type":"string",
-         "constraints":{
+         "name":"diffusion_carto",
+         "description":"autorise la diffusion sur les productions cartographiques.",
+         "example":"true",
+         "type":"boolean",
+         "constraints": {
             "required":true
          }
       },
       {
-         "name":"classification",
-         "description":"Classification de l'objet.",
-         "example":"Classification A",
-         "type":"string",
-         "constraints": {
-            "enum": ["Classification A", "Classification B", "Classification C"]
-         }
+         "name":"surface_off",
+         "description":"surface officielle en ha  inscrite dans la délibération.",
+         "example":"3453619.67",
+         "type":"float",
       }
    ],
-   "primaryKey":"id"
+   "primaryKey":"identifiant"
 }
