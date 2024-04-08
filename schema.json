@@ -17,42 +17,26 @@
          "path":"https://spdx.org/licenses/etalab-2.0.html"
       }
    ],
-   "resources":[
-      {
-         "title":"Fichier valide (CSV)",
-         "name":"exemple-valide-csv",
-         "path":"https://github.com/mon-orga/schema-objets-importants/raw/v0.1.0/exemple-valide.csv"
-      }
-   ],
-   "sources":[
-      {
-         "title":"Arrêté du 12 janvier 2017 relatif aux objets importants",
-         "path":"https://beta.legifrance.gouv.fr/codes/id/LEGISCTA000031367685/2020-05-25"
-      }
-   ],
-   "created":"2018-06-29",
-   "lastModified":"2019-05-06",
+   "created":"2024-04-08",
+   "lastModified":"2024-04-08",
    "version":"v0.1.0",
    "contributors":[
       {
-         "title":"John Smith",
-         "email":"john.smith@etalab.gouv.fr",
-         "organisation":"Etalab",
+         "title":"fréédric sanchez,
+         "email":"frederic.sanchez@ign.fr",
+         "organisation":"ign",
          "role":"author"
       },
-      {
-         "title":"Jane Doe",
-         "email":"jane.doe@example.com",
-         "organisation":"Association très importante",
-         "role":"contributor"
-      }
    ],
    "fields":[
       {
-         "name":"id",
-         "description":"Un identifiant unique de l'objet.",
-         "example":42,
-         "type":"integer",
+         "name":"identifiant",
+         "description":"Un identifiant unique de l'objet défint comme suit :fr-ENS<dep>-<counter>
+ avec dep sur 3 chiffres (0 en 1er chiffre pour les départements métropolitains)
+et 1 counter sur  6 chiffres avec avec 0 « pour combler »
+ .",
+         "example":fr-ENS001-000001 ,
+         "type":"text",
          "constraints":{
             "required":true,
             "minimum":1
