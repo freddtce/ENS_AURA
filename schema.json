@@ -71,7 +71,19 @@
          "description":"surface officielle en ha  inscrite dans la délibération.",
          "example":"3453619.67",
          "type":"float",
-      }
+      },
+      {
+         "name":"lien",
+         "description":"Lien url pointant vers une description plus complète de l'ENS (article, photo, fichier …).",
+         "example":"http://patrimoines.ain.fr/img/thumbnails/425_266/dombes_reserve_1_cs.jpg?1522831882",
+         "type":"text",
+      },
+      {
+         "name":"source",
+         "description":"Source utilisée pour la saisie de la géométrie du multipolygon.",
+         "example":"Orthophoto",
+         "type":"text",
+      },
    ],
    "primaryKey":"identifiant"
 }
