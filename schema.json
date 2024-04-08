@@ -22,7 +22,7 @@
    "version":"v0.1.0",
    "contributors":[
       {
-         "title":"fréédric sanchez,
+         "title":"frédéric sanchez,
          "email":"frederic.sanchez@ign.fr",
          "organisation":"ign",
          "role":"author"
@@ -33,8 +33,7 @@
          "name":"identifiant",
          "description":"Un identifiant unique de l'objet défint comme suit :fr-ENS<dep>-<counter>
  avec dep sur 3 chiffres (0 en 1er chiffre pour les départements métropolitains)
-et 1 counter sur  6 chiffres avec avec 0 « pour combler »
- .",
+et 1 counter sur  6 chiffres avec des 0 pour combler.",
          "example":fr-ENS001-000001 ,
          "type":"text",
          "constraints":{
