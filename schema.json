@@ -35,8 +35,7 @@
          "example":"fr-ENS001-000001" ,
          "type":"text",
          "constraints":{
-            "required":true,
-            "minimum":1
+            "required":true
          }
       },
       {
@@ -45,13 +44,14 @@
          "example":"Zone humide de la Forêt du Bout et Combe Grasse",
          "type":"string",
          "constraints":{
-            "required":true
+            "required":true,
+            "maxLength" : "100"
          }
       },
        {
          "name":"date_delib",
-         "description":"La date de délibération de création de l'ENS, au format AAAAMMJJ.",
-         "example":"20230824",
+         "description":"La date de délibération de création de l'ENS, au format AAAA-MM-JJ.",
+         "example":"2023-08-24",
          "type":"date",
          "constraints":{
             "required":true
@@ -70,19 +70,19 @@
          "name":"surface_off",
          "description":"surface officielle en ha  inscrite dans la délibération.",
          "example":"3453619.67",
-         "type":"float",
+         "type":"number",
       },
       {
          "name":"lien",
          "description":"Lien url pointant vers une description plus complète de l'ENS (article, photo, fichier …).",
          "example":"http://patrimoines.ain.fr/img/thumbnails/425_266/dombes_reserve_1_cs.jpg?1522831882",
-         "type":"text",
+         "type":"uri",
       },
       {
          "name":"source",
          "description":"Source utilisée pour la saisie de la géométrie du multipolygon.",
          "example":"Orthophoto",
-         "type":"text",
+         "type":"enum",
       },
    ],
    "primaryKey":"identifiant"
