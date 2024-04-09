@@ -23,12 +23,12 @@ ou des risques encourus par les usagers. Pour parvenir à remplir ces deux objec
 
 ## Présentation
 
-Ce format permettra d’échanger les données relatives aux Espaces Naturels Sensibles répondant à la loi Barnier de 1995. Il est l’émanation du GT ENS de la communauté des CD AURA (Conseils Départementaux Auvergne-Rhône-Alpes).
+Ce format permettra d’échanger les données relatives aux Espaces Naturels Sensibles répondant à la loi Barnier de 1995. Il est l’émanation du Groupe de Travail ENS de la communauté des CD AURA (Conseils Départementaux Auvergne-Rhône-Alpes).
 
 La démarche de sa construction :
 -	Analyse des données ENS livrées par l’ensemble des membres de la communauté et adéquation des différents attributs
--	Compatibilité avec le format INSPIRE, thème PS (Protected Sites) (cf Annexe_1)
--	Prise en compte de l’étude en cours présentée par PatriNat (cf Annexe 2) sur la constitution d’une base France Entière des Espaces Naturels Sensibles
+-	Compatibilité avec le format INSPIRE, thème PS (Protected Sites). 
+-	Prise en compte de l’étude en cours présentée par PatriNat (INPN-MNHM) sur la constitution d’une base France Entière des Espaces Naturels Sensibles.
 Le format d’échange contient des métadonnées informant sur la licence d’utilisation des données, des notions de qualité et les spécifications de saisie particulières.
 
 
