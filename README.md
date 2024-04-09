@@ -1,5 +1,5 @@
-## schema des Espaces Naturels Sensibles CD AURA
-ce schema decrit le format d'échange mis en place par la Communauté de Conseils Départementaux d'Auvergne-Rhône-Alpes sur le thème des Espaces Naturels Sensibles (ENS) qui entre dans la compétence des  conseils départementaux.
+## Schema des Espaces Naturels Sensibles CD AURA
+Ce schema decrit le format d'échange mis en place par la Communauté de Conseils Départementaux d'Auvergne-Rhône-Alpes sur le thème des Espaces Naturels Sensibles (ENS) qui entre dans la compétence des  conseils départementaux.
 
 ## Présentation
 
