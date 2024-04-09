@@ -31,7 +31,7 @@
    "fields":[
       {
          "name":"identifiant",
-         "description":"Un identifiant unique de l'objet définit comme suit :fr-ENS<dep>-<counter> avec dep sur 3 chiffres (0 en 1er chiffre pour les départements métropolitains) et 1 counter sur  6 chiffres avec des 0 pour combler.",
+         "description":"identifiant unique de l'objet définit comme suit :fr-ENS<dep>-<counter> avec dep sur 3 chiffres (0 en 1er chiffre pour les départements métropolitains) et 1 counter sur  6 chiffres avec des 0 pour combler.",
          "example":"fr-ENS001-000001" ,
          "type":"string",
          
@@ -44,7 +44,7 @@
       },
       {
          "name":"nom",
-         "description":"nom comme inscrit dans la délibération, en graphie riche (minuscules accentuées)",
+         "description":"dénomination de l'ENS comme inscrit dans la délibération, en graphie riche (minuscules accentuées)",
          "example":"Zone humide de la Forêt du Bout et Combe Grasse",
          "type":"string",
          "maxLength" : "100",
@@ -55,9 +55,10 @@
       },
        {
          "name":"date_delib",
-         "description":"Date de délibération de création de l'ENS, au format AAAAMMJJ   Si la date est inconnue, ne pas remplir   Si uniquement l'année est connue, rempli avec AAAA0101",
-         "example":"20230804",
-         "type":"date",
+         "description":"date de délibération de création de l'ENS, au format AAAA-MM-JJ   Si la date est inconnue, ne pas remplir   Si uniquement l'année est connue, rempli avec AAAA-01-01",
+         "example":"2023-08-04",
+         "type":"string",
+          "format":"date"
           "missingValues":[""],
          "constraints":{
             "required":true
@@ -77,14 +78,14 @@
          "name":"surface_off",
          "description":"surface officielle inscrite dans la délibération, en ha (2 décimales).",
          "example":"3453619.67",
-         "type":"number",
+         "type":"number"
       },
       {
          "name":"lien",
          "description":"Lien url pointant vers une description plus complète de l'ENS (article, photo, fichier …).",
          "example":"http://patrimoines.ain.fr/img/thumbnails/425_266/dombes_reserve_1_cs.jpg?1522831882",
          "type":"string",
-         "format":"uri",
+         "format":"uri"
       },
       {
          "name":"source",
@@ -98,10 +99,11 @@
       },
       {
          "name":"millesime",
-         "description":"Millesime de la source utilisée pour la saisie de la géométrie du multipolygon   format AAAA",
+         "description":"millesime de la source utilisée pour la saisie de la géométrie du multipolygon   format AAAA",
          "example":"2022",
          "type":"string",
-         "Len
+         "LengthMax":"4"
+         "lengthMin":"4"
          
          
       },
