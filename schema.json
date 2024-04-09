@@ -101,7 +101,7 @@
          "name":"millesime",
          "description":"millesime de la source utilisée pour la saisie de la géométrie du multipolygon   format AAAA",
          "example":"2022",
-         "type":"string",
+         "type":"integer",
          "LengthMax":"4"
          "lengthMin":"4"
          
