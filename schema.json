@@ -33,7 +33,9 @@
          "name":"identifiant",
          "description":"Un identifiant unique de l'objet définit comme suit :fr-ENS<dep>-<counter> avec dep sur 3 chiffres (0 en 1er chiffre pour les départements métropolitains) et 1 counter sur  6 chiffres avec des 0 pour combler.",
          "example":"fr-ENS001-000001" ,
-         "type":"text",
+         "type":"string",
+         "minLength" : "16",
+         "maxLength" :"16",
          "constraints":{
             "required":true
          }
@@ -43,9 +45,10 @@
          "description":"nom comme inscrit dans la délibération, en graphie riche (minuscules accentuées)",
          "example":"Zone humide de la Forêt du Bout et Combe Grasse",
          "type":"string",
+         "maxLength" : "100",
          "constraints":{
             "required":true,
-            "maxLength" : "100"
+         
          }
       },
        {
