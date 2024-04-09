@@ -1,14 +1,15 @@
 {
-   "$schema":"https://github.com/freddtce/ENS_AURA/blob/master/schema.json",
+   "$schema": "https://frictionlessdata.io/schemas/table-schema.json",,
    "name":"ENS",
-   "title":"Schéma du format d'échangedes ENS ",
-   "description":"Spécification du format d'échange des ENS établi par la communauté des CD AURA",
+   "title":"Schéma du format d'échange des Espaces Naturels Sensibles (ENS).",
+   "description":"Spécification du format d'échange des Espaces Naturels Sensibles (ENS) établi par la communauté des CD AURA",
    "keywords":[
       "ENS",
-      "Espace Naturel Sensible"
+      "Espace Naturel Sensible",
+      "Aires protégées de France"
    ],
    "countryCode":"FR",
-   "homepage":"https://github.com/Communanute-CD-AURA/schema-ENS_Echange_CDAURA",
+   "homepage":"https://github.com/freddtce/ENS_AURA",
    "path":"https://github.com/freddtce/ENS_AURA/blob/master/schema.json",
    "licenses":[
       {
@@ -31,7 +32,7 @@
    "fields":[
       {
          "name":"identifiant",
-         "description":"identifiant unique de l'objet définit comme suit :fr-ENS<dep>-<counter> avec dep sur 3 chiffres (0 en 1er chiffre pour les départements métropolitains) et 1 counter sur  6 chiffres avec des 0 pour combler.",
+         "description":"Identifiant unique de l'objet définit comme suit :fr-ENS<dep>-<counter> avec dep sur 3 chiffres (0 en 1er chiffre pour les départements métropolitains) et 1 counter sur  6 chiffres avec des 0 pour combler.",
          "example":"fr-ENS001-000001" ,
          "type":"string",
          
@@ -44,7 +45,7 @@
       },
       {
          "name":"nom",
-         "description":"dénomination de l'ENS comme inscrit dans la délibération, en graphie riche (minuscules accentuées)",
+         "description":"Dénomination de l'ENS comme inscrit dans la délibération, en graphie riche (minuscules accentuées)",
          "example":"Zone humide de la Forêt du Bout et Combe Grasse",
          "type":"string",
          "maxLength" : "100",
@@ -55,10 +56,10 @@
       },
        {
          "name":"date_delib",
-         "description":"date de délibération de création de l'ENS, au format AAAA-MM-JJ   Si la date est inconnue, ne pas remplir   Si uniquement l'année est connue, rempli avec AAAA-01-01",
+         "description":"Date de délibération de création de l'ENS, au format AAAA-MM-JJ.\nSi la date est inconnue, ne pas remplir.\nSi uniquement l'année est connue, rempli avec AAAA-01-01",
          "example":"2023-08-04",
          "type":"string",
-          "format":"date"
+          "format":"date",
           "missingValues":[""],
          "constraints":{
             "required":true
