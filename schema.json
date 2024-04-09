@@ -34,10 +34,12 @@
          "description":"Un identifiant unique de l'objet définit comme suit :fr-ENS<dep>-<counter> avec dep sur 3 chiffres (0 en 1er chiffre pour les départements métropolitains) et 1 counter sur  6 chiffres avec des 0 pour combler.",
          "example":"fr-ENS001-000001" ,
          "type":"string",
-         "minLength" : "16",
-         "maxLength" :"16",
+         
          "constraints":{
-            "required":true
+            "required":true,
+            "unique":"true",
+            "minLength" : "16",
+            "maxLength" :"16",
          }
       },
       {
@@ -53,11 +55,13 @@
       },
        {
          "name":"date_delib",
-         "description":"La date de délibération de création de l'ENS, au format AAAAMMJJ.",
+         "description":"Date de délibération de création de l'ENS, au format AAAAMMJJ   Si la date est inconnue, ne pas remplir   Si uniquement l'année est connue, rempli avec AAAA0101",
          "example":"20230804",
          "type":"date",
+          "missingValues":[""],
          "constraints":{
             "required":true
+         
          }
       },
       {
@@ -80,6 +84,7 @@
          "description":"Lien url pointant vers une description plus complète de l'ENS (article, photo, fichier …).",
          "example":"http://patrimoines.ain.fr/img/thumbnails/425_266/dombes_reserve_1_cs.jpg?1522831882",
          "type":"string",
+         "format":"uri",
       },
       {
          "name":"source",
@@ -90,6 +95,15 @@
          "enum":[
          "Orthophoto","PCI Vecteur", "PCI Raster","BDParcellaire","RPCU","GPS","SCAN25","Autre"
          ]
+      },
+      {
+         "name":"millesime",
+         "description":"Millesime de la source utilisée pour la saisie de la géométrie du multipolygon   format AAAA",
+         "example":"2022",
+         "type":"string",
+         "Len
+         
+         
       },
    ],
    "primaryKey":"identifiant"
