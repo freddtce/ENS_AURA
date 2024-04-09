@@ -1,5 +1,5 @@
 {
-   "$schema":"https://specs.ENS_Echange_CDAURA.data.io/schemas/table-schema.json",
+   "$schema":"https://github.com/freddtce/ENS_AURA/blob/master/schema.json",
    "name":"ENS",
    "title":"Schéma du format d'échangedes ENS ",
    "description":"Spécification du format d'échange des ENS établi par la communauté des CD AURA",
@@ -9,7 +9,7 @@
    ],
    "countryCode":"FR",
    "homepage":"https://github.com/Communanute-CD-AURA/schema-ENS_Echange_CDAURA",
-   "path":"https://github.com/Communanute-CD-AURA/schema-ENS_Echange_CDAURA/raw/v0.1.0/schema.json",
+   "path":"https://github.com/freddtce/ENS_AURA/blob/master/schema.json",
    "licenses":[
       {
          "title":"Etalab Licence Ouverte 2.0",
