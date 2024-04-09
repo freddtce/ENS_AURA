@@ -53,8 +53,8 @@
       },
        {
          "name":"date_delib",
-         "description":"La date de délibération de création de l'ENS, au format AAAA-MM-JJ.",
-         "example":"2023-08-24",
+         "description":"La date de délibération de création de l'ENS, au format AAAAMMJJ.",
+         "example":"20230804",
          "type":"date",
          "constraints":{
             "required":true
@@ -71,7 +71,7 @@
       },
       {
          "name":"surface_off",
-         "description":"surface officielle en ha  inscrite dans la délibération.",
+         "description":"surface officielle inscrite dans la délibération, en ha (2 décimales).",
          "example":"3453619.67",
          "type":"number",
       },
@@ -79,13 +79,17 @@
          "name":"lien",
          "description":"Lien url pointant vers une description plus complète de l'ENS (article, photo, fichier …).",
          "example":"http://patrimoines.ain.fr/img/thumbnails/425_266/dombes_reserve_1_cs.jpg?1522831882",
-         "type":"uri",
+         "type":"string",
       },
       {
          "name":"source",
          "description":"Source utilisée pour la saisie de la géométrie du multipolygon.",
          "example":"Orthophoto",
-         "type":"enum",
+         "type":"string",
+         
+         "enum":[
+         "Orthophoto","PCI Vecteur", "PCI Raster","BDParcellaire","RPCU","GPS","SCAN25","Autre"
+         ]
       },
    ],
    "primaryKey":"identifiant"
