@@ -1,113 +1,105 @@
 {
-   "$schema": "https://frictionlessdata.io/schemas/table-schema.json",,
-   "name":"ENS",
-   "title":"Schéma du format d'échange des Espaces Naturels Sensibles (ENS).",
-   "description":"Spécification du format d'échange des Espaces Naturels Sensibles (ENS) établi par la communauté des CD AURA",
-   "keywords":[
+   "$schema": "https://frictionlessdata.io/schemas/table-schema.json",
+   "name": "espace-naturel-sensible",
+   "title": "Schéma du format d'échange des Espaces Naturels Sensibles (ENS).",
+   "description": "Spécification du format d'échange des Espaces Naturels Sensibles (ENS) établi par la communauté des CD AURA",
+   "keywords": [
       "ENS",
       "Espace Naturel Sensible",
       "Aires protégées de France"
    ],
-   "countryCode":"FR",
-   "homepage":"https://github.com/freddtce/ENS_AURA",
-   "path":"https://github.com/freddtce/ENS_AURA/blob/master/schema.json",
-   "licenses":[
+   "countryCode": "FR",
+   "homepage": "https://github.com/freddtce/ENS_AURA",
+   "path": "https://github.com/freddtce/ENS_AURA/blob/master/schema.json",
+   "licenses": [
       {
-         "title":"Etalab Licence Ouverte 2.0",
-         "name":"etalab-2.0",
-         "path":"https://spdx.org/licenses/etalab-2.0.html"
+         "title": "Etalab Licence Ouverte 2.0",
+         "name": "etalab-2.0",
+         "path": "https://spdx.org/licenses/etalab-2.0.html"
       }
    ],
-   "created":"2024-04-08",
-   "lastModified":"2024-04-08",
-   "version":"v0.1.0",
-   "contributors":[
+   "created": "2024-04-08",
+   "lastModified": "2024-04-08",
+   "version": "v0.1.0",
+   "contributors": [
       {
-         "title":"frédéric sanchez",
-         "email":"frederic.sanchez@ign.fr",
-         "organisation":"ign",
-         "role":"author"
-      },
+         "title": "frédéric sanchez",
+         "email": "frederic.sanchez@ign.fr",
+         "organisation": "ign",
+         "role": "author"
+      }
    ],
-   "fields":[
+   "fields": [
       {
-         "name":"identifiant",
-         "description":"Identifiant unique de l'objet définit comme suit :fr-ENS<dep>-<counter> avec dep sur 3 chiffres (0 en 1er chiffre pour les départements métropolitains) et 1 counter sur  6 chiffres avec des 0 pour combler.",
-         "example":"fr-ENS001-000001" ,
-         "type":"string",
-         
-         "constraints":{
-            "required":true,
-            "unique":"true",
-            "minLength" : "16",
-            "maxLength" :"16",
+         "name": "identifiant",
+         "description": "Identifiant unique de l'objet définit comme suit :fr-ENS<dep>-<counter> avec dep sur 3 chiffres (0 en 1er chiffre pour les départements métropolitains) et 1 counter sur  6 chiffres avec des 0 pour combler.",
+         "example": "fr-ENS001-000001" ,
+         "type": "string",
+         "constraints": {
+            "required": true,
+            "pattern": "fr-ENS\\d{3}-\\d{6}"
          }
       },
       {
-         "name":"nom",
-         "description":"Dénomination de l'ENS comme inscrit dans la délibération, en graphie riche (minuscules accentuées)",
-         "example":"Zone humide de la Forêt du Bout et Combe Grasse",
-         "type":"string",
+         "name": "nom",
+         "description": "Dénomination de l'ENS comme inscrit dans la délibération, en graphie riche (minuscules accentuées)",
+         "example": "Zone humide de la Forêt du Bout et Combe Grasse",
+         "type": "string",
          "maxLength" : "100",
-         "constraints":{
-            "required":true,
-         
+         "constraints": {
+            "required": true
          }
       },
        {
-         "name":"date_delib",
-         "description":"Date de délibération de création de l'ENS, au format AAAA-MM-JJ.\nSi la date est inconnue, ne pas remplir.\nSi uniquement l'année est connue, rempli avec AAAA-01-01",
-         "example":"2023-08-04",
-         "type":"string",
-          "format":"date",
-          "missingValues":[""],
-         "constraints":{
-            "required":true
-         
-         }
+         "name": "date_delib",
+         "description": "Date de délibération de création de l'ENS, au format AAAA-MM-JJ.\nSi la date est inconnue, ne pas remplir.\nSi uniquement l'année est connue, remplir avec AAAA-01-01",
+         "type": "date",
+         "format": "%Y-%m-%d",
+         "example": "2023-08-04"
       },
       {
-         "name":"diffusion_carto",
-         "description":"autorise la diffusion sur les productions cartographiques.",
-         "example":"true",
-         "type":"boolean",
+         "name": "diffusion_carto",
+         "description": "Autorise ou non la diffusion sur les productions cartographiques.",
+         "type": "boolean",
          "constraints": {
-            "required":true
+            "required": true
          }
       },
       {
-         "name":"surface_off",
-         "description":"surface officielle inscrite dans la délibération, en ha (2 décimales).",
-         "example":"3453619.67",
-         "type":"number"
+         "name": "surface_off",
+         "description": "Surface officielle inscrite dans la délibération, en hectares (2 décimales).",
+         "example": "3453619.67",
+         "type": "number"
       },
       {
-         "name":"lien",
-         "description":"Lien url pointant vers une description plus complète de l'ENS (article, photo, fichier …).",
-         "example":"http://patrimoines.ain.fr/img/thumbnails/425_266/dombes_reserve_1_cs.jpg?1522831882",
-         "type":"string",
-         "format":"uri"
+         "name": "lien",
+         "description": "Lien url pointant vers une description plus complète de l'ENS (article, photo, fichier …).",
+         "example": "http://patrimoines.ain.fr/img/thumbnails/425_266/dombes_reserve_1_cs.jpg?1522831882",
+         "type": "string",
+         "format": "uri"
       },
       {
-         "name":"source",
-         "description":"Source utilisée pour la saisie de la géométrie du multipolygon.",
-         "example":"Orthophoto",
-         "type":"string",
-         
-         "enum":[
-         "Orthophoto","PCI Vecteur", "PCI Raster","BDParcellaire","RPCU","GPS","SCAN25","Autre"
+         "name": "source",
+         "description": "Source utilisée pour la saisie de la géométrie du multipolygon.",
+         "example": "Orthophoto",
+         "type": "string",
+         "enum": [
+            "Orthophoto",
+            "PCI Vecteur",
+            "PCI Raster",
+            "BDParcellaire",
+            "RPCU",
+            "GPS",
+            "SCAN25",
+            "Autre"
          ]
       },
       {
-         "name":"millesime",
-         "description":"millesime de la source utilisée pour la saisie de la géométrie du multipolygon   format AAAA",
-         "example":"2022",
-         "type":"integer",
-         "LengthMax":"4"
-         "lengthMin":"4"
-         
-         
-      },
+         "name": "millesime",
+         "description": "Millésime de la source utilisée pour la saisie de la géométrie du multipolygon.",
+         "type": "year",
+         "example": "2022"
+      }
    ],
-   "primaryKey":"identifiant"
+   "primaryKey": "identifiant"
 }
