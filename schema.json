@@ -52,13 +52,10 @@
       },
        {
          "name": "date_delib",
-         "description": "Date de délibération de création de l'ENS, au format AAAA-MM-JJ.\nSi la date est inconnue, ne pas remplir.\nSi uniquement l'année est connue, rempli avec AAAA-01-01",
+         "description": "Date de délibération de création de l'ENS, au format AAAA-MM-JJ.\nSi la date est inconnue, ne pas remplir.\nSi uniquement l'année est connue, remplir avec AAAA-01-01",
          "type": "date",
          "format": "%Y-%m-%d",
-         "example": "2023-08-04",
-         "constraints": {
-            "required": true
-         }
+         "example": "2023-08-04"
       },
       {
          "name": "diffusion_carto",
