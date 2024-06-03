@@ -107,7 +107,7 @@
          "name": "commentaire",
          "description": "Ajout de précisions concernant l’ENS (1000 caractères maximum).",
          "type": "string",
-         "maxLength"= "1000",
+         "maxLength": "1000",
          "example": "Zone humide composée de marais et de tourbières"
       }
    ],
