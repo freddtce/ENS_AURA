@@ -63,6 +63,7 @@
       {
          "name": "diffusion_carto",
          "description": "Autorise ou non la diffusion sur les productions cartographiques.",
+         "example" :"1",
          "type":"boolean",
             "trueValues":[
             "true",
