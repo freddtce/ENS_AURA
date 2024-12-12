@@ -32,13 +32,12 @@ La démarche de sa construction :
 Le format d’échange contient des métadonnées informant sur la licence d’utilisation des données, des notions de qualité et les spécifications de saisie particulières.
 
 
-## Fichiers disponibles
+## Métadonnées du format d'échange
 
-Ce dépôt contient un ensemble de fichiers utiles pour un dépôt d'un schéma [Table Schema](https://specs.frictionlessdata.io/table-schema/).
+format             : geopackage
+encodage           : UTF8
+type d'objet        : multipolygon
+date de mise à jour : AAAAMMJJ
 
-- [`CHANGELOG.md`](CHANGELOG.md) contient la liste des changements entre les différentes versions de votre schéma ;
-- [`exemple-valide.csv`](exemple-valide.csv) est un fichier CSV d'exemple conforme par rapport au schéma décrit dans `schema.json`  ;
-- [`LICENSE.md`](LICENSE.md) est le fichier de licence du dépôt. Nous recommandons d'utiliser la [Licence Ouverte](https://www.etalab.gouv.fr/licence-ouverte-open-licence), cette licence est recommandée par l'administration française pour le partage de données et de documents ;
-- [`README.md`](README.md) est le fichier que vous lisez actuellement. À terme, il devra présenter votre schéma ;
-- [`schema.json`](schema.json) est le schéma au format Table Schema.
+
 
