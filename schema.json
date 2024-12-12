@@ -63,7 +63,31 @@
       {
          "name": "diffusion_carto",
          "description": "Autorise ou non la diffusion sur les productions cartographiques.",
-         "type": "boolean",
+         "type":"boolean",
+            "trueValues":[
+            "true",
+            "True",
+            "TRUE",
+            "1",
+            "vrai",
+            "Vrai",
+            "VRAI",
+            "Oui",
+            "oui",
+            "OUI"
+            ],
+            "falseValues":[
+            "false",
+            "False",
+            "FALSE",
+            "0",
+            "faux",
+            "Faux",
+            "FAUX",
+            "Non",
+            "non",
+            "NON"
+            ],
          "constraints": {
             "required": true
          }
