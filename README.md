@@ -34,12 +34,9 @@ Le format d’échange contient des métadonnées informant sur la licence d’u
 
 ## Métadonnées du format d'échange
 
-format             : geopackage
-
-encodage           : UTF8
-
-type d'objet        : multipolygon
-
+format : geopackage
+encodage : UTF8
+type d'objet  : multipolygon
 date de mise à jour : AAAAMMJJ
 
 
