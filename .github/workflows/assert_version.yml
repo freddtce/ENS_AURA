@@ -16,5 +16,7 @@ jobs:
       with:
         python-version: "3.12"
 
-    - run: python .github/workflows/assert_version.py
+    - name: Run version check
+      run: |
+        python .github/workflows/assert_version.py
           
